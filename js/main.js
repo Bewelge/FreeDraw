@@ -25,70 +25,7 @@ function start() {
 	topBarWidth = width/7;
 	let lf =  topBarWidth * 1.5;
 	
-	//add other tabs first
-	for (let tab = topBars.length-1; tab>=0; tab--) {
-
-
-		let bottomBar = document.createElement("div");
-		bottomBar.className = "topTabBottomBar"
-		bottomBar.style.position = "absolute";
-
-		bottomBar.style.width = 0+"px";
-		bottomBar.style.height = 3+"px";
-		bottomBar.style.left = topBarWidth/2+"px";
-		
-		let tb = document.createElement("div");
-		let link = document.createElement("a");
-		let span = document.createElement("span");
-		span.style.left=0;
-		span.style.top=0;
-		span.style.position ="absolute";
-		span.style.width = "100%";
-		span.style.height ="100%";
-		link.href = "http://bewelge.com#"+topBars[tab];
-		link.target = "_blank";
-		
-		
-
-		tb.style.setProperty('--background-color', "rgba(60,70,120,0.8)");	
-		tb.style.setProperty('--background-color2', "rgba(60,70,120,0.8)");	
-		
-
-		tb.className = "topTab";
-		tb.id = topBars[tab];
-		tb.style.width = topBarWidth + "px";
-		tb.style.float = "right"
-		tb.innerHTML =  topBars[tab].charAt(0).toUpperCase() + topBars[tab].slice(1);
-		link.appendChild(span);
-		tb.appendChild(link);
-		tb.appendChild(bottomBar);
-
-		$("#topBar").append(tb);
-		lf += topBarWidth;
-		
-
-
-		
-	}
-
-	$(".topTab").css("min-height", 20+"px");
-	$(".topTab").css("width", 15+"vw");
 	
-	//size all tabs. Now do home button sizing specifically
-	let home = document.getElementById("home");
-	$(home).css("left",0+"px");
-	$(home).css("bottom",0+"px");
-	$(home).css("width",20+"vw");
-	home.style.setProperty("--background-color","rgba(55,55,55,0.5)");//$(tb).css("border-right","5px solid var(--background-color)");
-	home.style.setProperty("--background-color2","rgba(55,5,5,0.9)");//$(tb).css("border-left","5px solid var(--background-color)");
-	home.href = "www.bewelge.com";
-	let bottomBar = document.createElement("div");
-	bottomBar.className = "topTabBottomBar"
-	bottomBar.style.position = "absolute";
-	bottomBar.style.width = 0+"px";
-	bottomBar.style.height = 3+"px";
-	bottomBar.style.left = topBarWidth/2+"px";
-	document.getElementById("home").appendChild(bottomBar);
 	
 
 	hlfSize = Math.floor(Math.min(width, height) / 2) + 0.5;
