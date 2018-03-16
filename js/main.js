@@ -17,8 +17,8 @@ function start() {
 	$("body").css("width", width);
 	$("body").css("height", height);
 
-	/*$("#mainWindow").css("height",height-50+"px");
-	$("#mainWindow").css("top",50+"px");*/
+	$("#main").css("height",height+"px");
+	$("#main").css("top",0+"px");
 
 	
 
@@ -33,8 +33,8 @@ function start() {
 
 
 	//initHome();
-	FreeDrawCanvas.init($("#mainWindow"));
-	//MandelBrotRender.init(document.getElementById("mainWindow"));
+	FreeDrawCanvas.init($("#main"));
+	//MandelBrotRender.init(document.getElementById("main"));
 
 	
 
