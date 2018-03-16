@@ -17,8 +17,8 @@ function start() {
 	$("body").css("width", width);
 	$("body").css("height", height);
 
-	$("#mainWindow").css("height",height-50+"px");
-	$("#mainWindow").css("top",50+"px");
+	/*$("#mainWindow").css("height",height-50+"px");
+	$("#mainWindow").css("top",50+"px");*/
 
 	
 

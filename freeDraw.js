@@ -181,9 +181,9 @@ var FDmouseY = 0;
 		let inp = document.createElement("input");
 		inp.value = brushes[i].settings[set];
 		inp.addEventListener("change", function(e) {
-			console.log(e);
+			
 			brushes[i].settings[set] = this.value;
-			console.log(123);
+			
 		})
 		outerSettings.appendChild(inp);
 		return outerSettings
@@ -338,15 +338,15 @@ function FDhandleMouseMove(e) {
 			internalCount: 1,
 			draw: function(ct) {
 				//generatePointsStatic(ct.canvas, this.settings.margin.val);
-				console.log(pointsToDraw);
+				
 				if (pointsToDraw.length == 0) {
 					this.internalCount = 1;
 				}
-				console.log(mouseDown);
+				
 				//ct.clearRect(0,0,fdW,fdH);
 				ct.lineWidth = this.settings.lineWidth.val;
 				ct.fillStyle = this.settings.strokeStyle.val;
-				console.log(ct);
+				
 				ct.beginPath();
 				if (pointsToDraw.length > this.internalCount + 1) {
 					//ct.lineTo(pointsToDraw[1][0],pointsToDraw[1][1]);
@@ -1655,7 +1655,6 @@ function FDhandleMouseMove(e) {
 		totDif += Math.abs(dt1[ind1 + 1] - dt2[ind2 + 1]) / 255;
 		totDif += Math.abs(dt1[ind1 + 2] - dt2[ind2 + 2]) / 255;
 		//totDif += dt1[ind1]-dt2[ind2];
-		//console.log(ind1,ind2,totDif);
 		if (totDif / 3 < tol) {
 			return true;
 		} else {
