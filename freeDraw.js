@@ -22,13 +22,12 @@ var FDcMouseY = 0;
 var FDmouseX = 0;
 var FDmouseY = 0;
 	function initFreeDraw(el) {
-		hoverCanvas = false;
 		currentSite = "freeDraw";
 
 		fdW = Math.ceil(width * 0.7);
 		fdH = Math.ceil(height * 0.6);
 
-		doTransitionAnimation();
+
 
 
 		started = false;

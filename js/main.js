@@ -111,26 +111,7 @@ function handleMouseMove(e) {
 	
 	//$("#topBar").css("background-image","linear-gradient(90deg,black "+0+"%, rgba(255,255,255,0.1) "+(mid)+"%, black "+100+"%)");
 }
-function doTransitionAnimation() {
-	let el = document.getElementById("loadTrans");
-	//el.style.top = height*1.5+"px";
-	el.style.bottom = "0px";
-	$(el).stop().animate({
-		height:height*1.5,
-	},0.1 ,function() {
-		$(el).stop().animate({
-			height:"0px",
-			bottom:height+"px"
-		}, function() {
-			document.getElementById("loadTrans").style.bottom = "0px";
-			//document.getElementById("loadTrans").style.top = "fuckyou";
-			/*$("#loadTrans").css("bottom","0px");*/
 
-		})
-	})
-	
-
-}
 function createCanvas(w, h, mL, mT, id, className, L, T, abs) {
 
 	let tmpCnv = document.createElement("canvas");

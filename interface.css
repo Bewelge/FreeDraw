@@ -224,13 +224,6 @@ float: right;
     -ms-transition:all 		0.2s ease-out;
     transition:all 			0.2s ease-out;
 }
-#loadTrans {
-	background: linear-gradient(0,#0033CC,#0086c3);
-	position: absolute;
-	height:0px;
-	width:100%;
-	bottom:0px;
-}
 #topBar {
 	/*background-image: url('bewelge4.svg');
 	background-repeat: no-repeat;
